@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-white font-serif text-xl font-bold">Olena Kovalenko</span>
+              <span className="text-white font-serif text-xl font-bold">Henadii Pampukha</span>
             </div>
           </div>
           

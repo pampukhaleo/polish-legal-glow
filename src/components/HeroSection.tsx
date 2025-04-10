@@ -28,7 +28,7 @@ const HeroSection = () => {
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden rounded-xl border-4 border-zinc-800">
               <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/20 to-zinc-900/80"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <p className="font-serif text-lg">Olena Kovalenko</p>
+                <p className="font-serif text-lg">Henadii Pampukha</p>
                 <p className="text-sm text-gray-300">LL.M. in International Business Law</p>
               </div>
               {/* Replace with actual image path when available */}
