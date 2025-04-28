@@ -20,9 +20,9 @@ const App = () => (
         <BrowserRouter basename={import.meta.env.BASE_URL}>
           <div className="dark">
             <Routes>
-              <Route path="/polish-legal-glow/" element={<Index />} />
-              <Route path="/polish-legal-glow/services/:slug" element={<ServicePage />} />
-              <Route path="/polish-legal-glow/about" element={<About />} />
+              <Route path="/" element={<Index />} />
+              <Route path="/services/:slug" element={<ServicePage />} />
+              <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
