@@ -2,6 +2,8 @@
 import { useParams } from 'react-router-dom';
 import { services } from '@/data/services';
 import NotFound from './NotFound';
+import Navbar from '@/components/Navbar';
+import { Link } from 'react-router-dom';
 
 const ServicePage = () => {
   const { slug } = useParams();
@@ -12,9 +14,11 @@ const ServicePage = () => {
   }
 
   const ServiceIcon = service.icon;
+  const otherServices = services.filter((s) => s.slug !== slug);
 
   return (
     <div className="min-h-screen bg-zinc-900">
+      <Navbar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
@@ -27,13 +31,28 @@ const ServicePage = () => {
           <div className="prose prose-invert max-w-none">
             <p className="text-xl text-gray-400 mb-8">{service.description}</p>
             
-            {/* Тут можна додати більше контенту для кожного сервісу */}
             <div className="bg-zinc-800 rounded-lg p-8 mt-8">
               <h2 className="text-2xl font-bold text-white mb-4">Наші послуги включають:</h2>
               <p className="text-gray-400">
                 Детальна інформація про цей вид послуг буде додана найближчим часом. 
                 Для отримання додаткової інформації, будь ласка, зв'яжіться з нами.
               </p>
+            </div>
+
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-white mb-6">Інші послуги:</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {otherServices.map((otherService) => (
+                  <Link
+                    key={otherService.slug}
+                    to={`/polish-legal-glow/services/${otherService.slug}`}
+                    className="flex items-center gap-3 p-4 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors no-underline"
+                  >
+                    <otherService.icon className="h-6 w-6 text-white" />
+                    <span className="text-white font-medium">{otherService.title}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>

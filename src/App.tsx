@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ServicePage from "./pages/ServicePage";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
             <Routes>
               <Route path="/polish-legal-glow/" element={<Index />} />
               <Route path="/polish-legal-glow/services/:slug" element={<ServicePage />} />
+              <Route path="/polish-legal-glow/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
