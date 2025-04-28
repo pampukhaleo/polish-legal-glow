@@ -1,11 +1,12 @@
-/* Dark theme styles for our legal expert page */
+
+/* Dark theme styles with purple and burgundy theme */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #18181b; /* zinc-900 */
-  color: #f8fafc; /* zinc-50 */
+  background-color: #1A1F2C; /* Dark purple background */
+  color: #f8fafc; /* Light text */
   font-family: 'Inter', sans-serif;
 }
 
@@ -22,16 +23,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #27272a; /* zinc-800 */
+  background: #2D3748; /* Darker purple for track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #52525b; /* zinc-600 */
+  background-color: #6E59A5; /* Medium purple for thumb */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #71717a; /* zinc-500 */
+  background-color: #9b87f5; /* Lighter purple for hover */
 }
 
 /* Smooth transition for hover effects */
@@ -42,8 +43,8 @@ a, button {
 /* Glass effect for certain elements */
 .glass-panel {
   backdrop-filter: blur(8px);
-  background-color: rgba(24, 24, 27, 0.8); /* zinc-900 with opacity */
-  border: 1px solid rgba(63, 63, 70, 0.5); /* zinc-700 with opacity */
+  background-color: rgba(26, 31, 44, 0.8); /* Dark purple with opacity */
+  border: 1px solid rgba(110, 89, 165, 0.3); /* Medium purple with opacity */
 }
 
 /* Section transitions */
@@ -53,6 +54,19 @@ section {
 
 /* Focus styles for accessibility */
 :focus {
-  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline: 2px solid rgba(155, 135, 245, 0.5); /* Light purple with opacity */
   outline-offset: 2px;
+}
+
+/* Add purple gradient backgrounds */
+.purple-gradient {
+  background: linear-gradient(135deg, #6E59A5 0%, #9b87f5 100%);
+}
+
+.dark-purple-gradient {
+  background: linear-gradient(135deg, #1A1F2C 0%, #3D2A54 100%);
+}
+
+.burgundy-gradient {
+  background: linear-gradient(135deg, #7E2553 0%, #A31545 100%);
 }
