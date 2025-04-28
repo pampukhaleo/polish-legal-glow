@@ -1,46 +1,7 @@
 
-import { Briefcase, FileText, Globe, Building, Users, ShieldCheck } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-
-const services = [
-  {
-    title: "Цивільне право",
-    description: "Кредитні відносини, поділ майна, розлучення, розподіл опіки над дітьми, нотаріальні послуги, виконавче провадження, ДВС.",
-    icon: Globe,
-    slug: "civil-law"
-  },
-  {
-    title: "Господарське право",
-    description: "Господарські суди, адміністративні спори з податковими органами, міжнародні арбітражні спори, супровід виконання судових рішень.",
-    icon: Building,
-    slug: "commercial-law"
-  },
-  {
-    title: "Міжнародний арбітраж",
-    description: "Представництво інтересів підприємств у міжнародних арбітражних судах 59 країн світу, виконання рішень міжнародних арбітражних судів.",
-    icon: FileText,
-    slug: "international-arbitration"
-  },
-  {
-    title: "Кримінальне право",
-    description: "Суди загальної юрисдикції, аналіз та підготовка доказової бази, призначення, супровід і застосування судової експертизи у процесі, оскарження дій державних органів.",
-    icon: Briefcase,
-    slug: "criminal-law"
-  },
-  {
-    title: "Судова експертиза в Україні",
-    description: "Консультації, супровід та проведення судових експертиз в Україні на досудовій та судовій стадіях, рецензування.",
-    icon: Users,
-    slug: "forensic-examination-ukraine"
-  },
-  {
-    title: "Судові та наукові експертизи в Європі",
-    description: "Формування вашої правової позиції на основі судової експертизи проведеної європейськими експертами.",
-    icon: ShieldCheck,
-    slug: "forensic-examination-europe"
-  },
-];
+import { services } from "@/data/services";
 
 const ServicesSection = () => {
   return (
@@ -55,7 +16,7 @@ const ServicesSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Link to={`/services/${service.slug}`} key={index} className="no-underline">
+            <Link to={`/polish-legal-glow/services/${service.slug}`} key={index} className="no-underline">
               <Card className="bg-zinc-900 border-zinc-800 hover:border-zinc-700 transition-all h-full">
                 <CardHeader className="pb-2">
                   <div className="h-12 w-12 rounded-lg bg-zinc-800 flex items-center justify-center mb-4">

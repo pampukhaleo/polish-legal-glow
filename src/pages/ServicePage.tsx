@@ -1,7 +1,7 @@
 
 import { useParams } from 'react-router-dom';
-import { services } from '@/components/ServicesSection';
-import { NotFound } from './NotFound';
+import { services } from '@/data/services';
+import NotFound from './NotFound';
 
 const ServicePage = () => {
   const { slug } = useParams();
