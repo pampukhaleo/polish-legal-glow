@@ -16,7 +16,7 @@ const ServicesSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Link to={`/polish-legal-glow/services/${service.slug}`} key={index} className="no-underline">
+            <Link to={`/services/${service.slug}`} key={index} className="no-underline">
               <Card className="bg-zinc-900 border-zinc-800 hover:border-zinc-700 transition-all h-full">
                 <CardHeader className="pb-2">
                   <div className="h-12 w-12 rounded-lg bg-zinc-800 flex items-center justify-center mb-4">

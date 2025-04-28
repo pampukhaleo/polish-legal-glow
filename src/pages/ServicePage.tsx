@@ -45,7 +45,7 @@ const ServicePage = () => {
                 {otherServices.map((otherService) => (
                   <Link
                     key={otherService.slug}
-                    to={`/polish-legal-glow/services/${otherService.slug}`}
+                    to={`/services/${otherService.slug}`}
                     className="flex items-center gap-3 p-4 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors no-underline"
                   >
                     <otherService.icon className="h-6 w-6 text-white" />
