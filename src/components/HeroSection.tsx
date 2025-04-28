@@ -9,10 +9,10 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-serif mb-4">
-              Український <span className="text-gray-400">Юридичний</span> Експерт у Польщі
+              Професійна <span className="text-gray-400">Юридична</span> допомога українцям у Польщі
             </h1>
             <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-              Експертні юридичні консультації для українців з питань польського законодавства, бізнес-регулювання та імміграційних процесів.
+              Юридичні консультації з українського та міжнародного законодавства. Супровід та проведення судових експертиз в Україні та Європі.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-white text-black hover:bg-gray-200 font-medium py-2">
@@ -28,8 +28,8 @@ const HeroSection = () => {
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden rounded-xl border-4 border-zinc-800">
               <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/20 to-zinc-900/80"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <p className="font-serif text-lg">Henadii Pampukha</p>
-                <p className="text-sm text-gray-300">LL.M. in International Business Law</p>
+                <p className="font-serif text-lg">Геннадій Пампуха</p>
+                <p className="text-sm text-gray-300">Міжнародний арбітр, Судовий Експерт</p>
               </div>
               {/* Replace with actual image path when available */}
               <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
