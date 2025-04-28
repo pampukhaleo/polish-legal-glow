@@ -9,18 +9,18 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-serif mb-4">
-              Ukrainian Legal <span className="text-gray-400">Expert</span> in Poland
+              Український <span className="text-gray-400">Юридичний</span> Експерт у Польщі
             </h1>
             <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-              Expert legal counsel for Ukrainian nationals navigating Polish law, business regulations, and immigration processes.
+              Експертні юридичні консультації для українців з питань польського законодавства, бізнес-регулювання та імміграційних процесів.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-white text-black hover:bg-gray-200 font-medium py-2">
-                Book a Consultation
+                Записатись на консультацію
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-                View Services
+                Переглянути послуги
               </Button>
             </div>
           </div>

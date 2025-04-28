@@ -4,33 +4,33 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const services = [
   {
-    title: "Immigration Law",
-    description: "Legal assistance with residence permits, work permits, and citizenship applications for Ukrainians in Poland.",
+    title: "Імміграційне право",
+    description: "Юридична допомога з отриманням дозволу на проживання, дозволу на роботу та громадянства для українців у Польщі.",
     icon: Globe,
   },
   {
-    title: "Business Formation",
-    description: "Complete legal support for setting up your business in Poland, including company registration and compliance.",
+    title: "Створення бізнесу",
+    description: "Повна юридична підтримка при створенні вашого бізнесу в Польщі, включаючи реєстрацію компанії та відповідність вимогам.",
     icon: Building,
   },
   {
-    title: "Contract Law",
-    description: "Drafting and reviewing commercial agreements, employment contracts, and business transactions.",
+    title: "Договірне право",
+    description: "Складання та перевірка комерційних угод, трудових договорів та бізнес-операцій.",
     icon: FileText,
   },
   {
-    title: "Corporate Law",
-    description: "Legal advice on corporate governance, mergers & acquisitions, and regulatory compliance.",
+    title: "Корпоративне право",
+    description: "Юридичні консультації з питань корпоративного управління, злиття та поглинання, відповідності нормативним вимогам.",
     icon: Briefcase,
   },
   {
-    title: "Employment Law",
-    description: "Guidance on Polish labor regulations, employee rights, and employer obligations.",
+    title: "Трудове право",
+    description: "Консультації щодо польського трудового законодавства, прав працівників та обов'язків роботодавців.",
     icon: Users,
   },
   {
-    title: "Litigation",
-    description: "Representation in legal disputes, civil cases, and administrative proceedings in Polish courts.",
+    title: "Судові спори",
+    description: "Представництво в юридичних спорах, цивільних справах та адміністративних провадженнях у польських судах.",
     icon: ShieldCheck,
   },
 ];
@@ -40,9 +40,9 @@ const ServicesSection = () => {
     <section id="services" className="py-16 bg-zinc-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-4">Legal Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-4">Юридичні послуги</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Comprehensive legal solutions tailored to Ukrainian individuals and businesses operating in Poland.
+            Комплексні юридичні рішення для українських громадян та бізнесу, що працюють у Польщі.
           </p>
         </div>
         

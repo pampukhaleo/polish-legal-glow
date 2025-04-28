@@ -4,19 +4,19 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    quote: "Olena's expertise in Polish immigration law was invaluable for our family's relocation from Ukraine. Her guidance made the entire process smooth and stress-free.",
-    author: "Nataliya Kravchuk",
-    position: "Ukrainian Family, Warsaw",
+    quote: "Експертиза Генадія в польському імміграційному праві була неоціненною для переїзду нашої родини з України. Його рекомендації зробили весь процес простим і безстресовим.",
+    author: "Наталія Кравчук",
+    position: "Українська родина, Варшава",
   },
   {
-    quote: "As a Ukrainian entrepreneur opening a business in Poland, I couldn't have navigated the complex regulations without Olena's professional advice. Highly recommended!",
-    author: "Mikhail Shevchenko",
-    position: "Tech Startup Founder",
+    quote: "Як український підприємець, що відкриває бізнес у Польщі, я не зміг би розібратися у складних правилах без професійних порад Генадія. Дуже рекомендую!",
+    author: "Михайло Шевченко",
+    position: "Засновник технологічного стартапу",
   },
   {
-    quote: "Her detailed understanding of both Ukrainian and Polish legal systems gave us a significant advantage in our cross-border business operations.",
-    author: "Kateryna Bondar",
-    position: "CFO, Trading Company",
+    quote: "Його глибоке розуміння як української, так і польської правових систем дало нам значну перевагу в наших транскордонних бізнес-операціях.",
+    author: "Катерина Бондар",
+    position: "Фінансовий директор, Торгова компанія",
   },
 ];
 
@@ -25,9 +25,9 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="py-16 bg-zinc-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-4">Client Testimonials</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-4">Відгуки клієнтів</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            See what clients say about my legal services and commitment to excellence.
+            Дізнайтеся, що клієнти говорять про мої юридичні послуги та відданість справі.
           </p>
         </div>
         
