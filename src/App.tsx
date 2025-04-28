@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ServicePage from "./pages/ServicePage";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,7 @@ const App = () => (
           <div className="dark">
             <Routes>
               <Route path="/polish-legal-glow/" element={<Index />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="/polish-legal-glow/services/:slug" element={<ServicePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
