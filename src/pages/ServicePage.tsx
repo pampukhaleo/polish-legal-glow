@@ -30,11 +30,11 @@ const ServicePage = () => {
           </div>
           
           <div className="prose prose-invert max-w-none">
-            <p className="text-xl text-[#60A5FA] mb-8">{service.description}</p>
+            <p className="text-xl text-[#aaadb0] mb-8">{service.description}</p>
             
-            <div className="bg-[#1F1F3A] border border-[#1E40AF] rounded-lg p-8 mt-8 shadow-md">
+            <div className="bg-[#1F1F3A] border border-[#333333] rounded-lg p-8 mt-8 shadow-md">
               <h2 className="text-2xl font-bold text-white mb-4">Наші послуги включають:</h2>
-              <p className="text-[#60A5FA]">
+              <p className="text-[#aaadb0]">
                 Детальна інформація про цей вид послуг буде додана найближчим часом. 
                 Для отримання додаткової інформації, будь ласка, зв'яжіться з нами.
               </p>
@@ -47,7 +47,7 @@ const ServicePage = () => {
                   <Link
                     key={otherService.slug}
                     to={`/services/${otherService.slug}`}
-                    className="flex items-center gap-3 p-4 rounded-lg bg-[#1F1F3A] hover:bg-[#242456] border border-[#1E40AF] transition-colors no-underline shadow-md"
+                    className="flex items-center gap-3 p-4 rounded-lg bg-[#1F1F3A] hover:bg-[#242456] border border-[#333333] transition-colors no-underline shadow-md"
                   >
                     <otherService.icon className="h-6 w-6 text-[#60A5FA]" />
                     <span className="text-white font-medium">{otherService.title}</span>

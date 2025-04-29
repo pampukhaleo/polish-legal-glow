@@ -11,9 +11,9 @@ const About = () => {
           <h1 className="text-4xl font-bold text-white font-serif mb-8">Про мене</h1>
           
           <div className="prose prose-invert max-w-none">
-            <div className="bg-[#1F1F3A] border border-[#1E40AF] rounded-lg p-8 mb-8 shadow-md">
+            <div className="bg-[#1F1F3A] border border-[#333333] rounded-lg p-8 mb-8 shadow-md">
               <h2 className="text-2xl font-bold text-white mb-4">Геннадій Пампуха</h2>
-              <p className="text-[#60A5FA]">
+              <p className="text-[#aaadb0]">
                 Досвідчений юрист з більш ніж 20-річним стажем у сфері міжнародного права. 
                 Спеціалізуюся на вирішенні складних правових питань у цивільному, господарському 
                 та кримінальному праві.
@@ -22,7 +22,7 @@ const About = () => {
 
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-white">Освіта та кваліфікація</h3>
-              <ul className="list-disc list-inside text-[#60A5FA] space-y-2">
+              <ul className="list-disc list-inside text-[#aaadb0] space-y-2">
                 <li>Магістр права, Київський національний університет імені Тараса Шевченка</li>
                 <li>Сертифікований адвокат України</li>
                 <li>Член Національної асоціації адвокатів України</li>
@@ -30,7 +30,7 @@ const About = () => {
               </ul>
 
               <h3 className="text-2xl font-bold text-white pt-4">Професійний досвід</h3>
-              <ul className="list-disc list-inside text-[#60A5FA] space-y-2">
+              <ul className="list-disc list-inside text-[#aaadb0] space-y-2">
                 <li>Більше 1000 успішно вирішених справ</li>
                 <li>Представництво інтересів клієнтів у судах України та Європи</li>
                 <li>Експертиза в міжнародних арбітражних справах</li>

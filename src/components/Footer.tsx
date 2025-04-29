@@ -10,22 +10,22 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0F1729] py-10 border-t border-[#1E40AF]/40 shadow-lg">
+    <footer className="bg-[#0F1729] py-10 border-t border-[#333333]/40 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <span className="text-white font-serif text-xl font-bold">Геннадій Пампуха</span>
-            <p className="text-[#60A5FA] text-sm mt-1">Український юридичний експерт у Польщі</p>
+            <p className="text-[#aaadb0] text-sm mt-1">Український юридичний експерт у Польщі</p>
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-            <div className="text-[#60A5FA] text-sm">
+            <div className="text-[#aaadb0] text-sm">
               &copy; {new Date().getFullYear()} Усі права захищені.
             </div>
             
             <div className="flex space-x-4">
-              <a href="#" className="text-[#60A5FA] hover:text-white text-sm">Політика конфіденційності</a>
-              <a href="#" className="text-[#60A5FA] hover:text-white text-sm">Умови використання</a>
+              <a href="#" className="text-[#aaadb0] hover:text-white text-sm">Політика конфіденційності</a>
+              <a href="#" className="text-[#aaadb0] hover:text-white text-sm">Умови використання</a>
             </div>
             
             <button 
