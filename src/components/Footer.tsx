@@ -10,27 +10,27 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#1A1F2C] py-10 border-t border-[#6E59A5]/40">
+    <footer className="bg-[#0F1729] py-10 border-t border-[#533483]/40 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <span className="text-white font-serif text-xl font-bold">Геннадій Пампуха</span>
-            <p className="text-[#9b87f5] text-sm mt-1">Український юридичний експерт у Польщі</p>
+            <p className="text-[#A78BFA] text-sm mt-1">Український юридичний експерт у Польщі</p>
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-            <div className="text-[#D6BCFA] text-sm">
+            <div className="text-[#A78BFA] text-sm">
               &copy; {new Date().getFullYear()} Усі права захищені.
             </div>
             
             <div className="flex space-x-4">
-              <a href="#" className="text-[#D6BCFA] hover:text-white text-sm">Політика конфіденційності</a>
-              <a href="#" className="text-[#D6BCFA] hover:text-white text-sm">Умови використання</a>
+              <a href="#" className="text-[#A78BFA] hover:text-white text-sm">Політика конфіденційності</a>
+              <a href="#" className="text-[#A78BFA] hover:text-white text-sm">Умови використання</a>
             </div>
             
             <button 
               onClick={scrollToTop}
-              className="h-10 w-10 rounded-full purple-gradient hover:opacity-90 flex items-center justify-center text-white transition-colors"
+              className="h-10 w-10 rounded-full button-gradient hover:opacity-90 flex items-center justify-center text-white transition-colors"
               aria-label="Прокрутити вгору"
             >
               <ArrowUp className="h-5 w-5" />

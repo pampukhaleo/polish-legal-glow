@@ -1,11 +1,11 @@
 
-/* Dark theme styles with purple and burgundy theme */
+/* Dark theme styles with deep blue-purple backgrounds */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #1A1F2C; /* Dark purple background */
+  background-color: #1A1A2E; /* Dark blue-purple background */
   color: #f8fafc; /* Light text */
   font-family: 'Inter', sans-serif;
 }
@@ -23,16 +23,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #2D3748; /* Darker purple for track */
+  background: #16213E; /* Darker track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #6E59A5; /* Medium purple for thumb */
+  background-color: #533483; /* Deep purple for thumb */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #9b87f5; /* Lighter purple for hover */
+  background-color: #8367C7; /* Lighter purple for hover */
 }
 
 /* Smooth transition for hover effects */
@@ -43,8 +43,8 @@ a, button {
 /* Glass effect for certain elements */
 .glass-panel {
   backdrop-filter: blur(8px);
-  background-color: rgba(26, 31, 44, 0.8); /* Dark purple with opacity */
-  border: 1px solid rgba(110, 89, 165, 0.3); /* Medium purple with opacity */
+  background-color: rgba(26, 26, 46, 0.8); /* Dark blue with opacity */
+  border: 1px solid rgba(83, 52, 131, 0.3); /* Deep purple with opacity */
 }
 
 /* Section transitions */
@@ -54,19 +54,44 @@ section {
 
 /* Focus styles for accessibility */
 :focus {
-  outline: 2px solid rgba(155, 135, 245, 0.5); /* Light purple with opacity */
+  outline: 2px solid rgba(131, 103, 199, 0.5); /* Purple with opacity */
   outline-offset: 2px;
 }
 
-/* Add purple gradient backgrounds */
+/* Add dark gradients backgrounds */
 .purple-gradient {
-  background: linear-gradient(135deg, #6E59A5 0%, #9b87f5 100%);
+  background: linear-gradient(135deg, #533483 0%, #8367C7 100%);
 }
 
 .dark-purple-gradient {
-  background: linear-gradient(135deg, #1A1F2C 0%, #3D2A54 100%);
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
 }
 
 .burgundy-gradient {
-  background: linear-gradient(135deg, #7E2553 0%, #A31545 100%);
+  background: linear-gradient(135deg, #4B0082 0%, #800020 100%);
+}
+
+/* New dark blue navigation */
+.dark-nav-gradient {
+  background: linear-gradient(180deg, #0F1729 0%, #1A1A2E 100%);
+}
+
+/* Service card gradient */
+.service-card-gradient {
+  background: linear-gradient(135deg, #1F1F3A 0%, #242456 100%);
+}
+
+/* Testimonial section */
+.testimonial-gradient {
+  background: linear-gradient(135deg, #371B58 0%, #4C3575 100%);
+}
+
+/* Button gradient */
+.button-gradient {
+  background: linear-gradient(135deg, #533483 0%, #8367C7 100%);
+}
+
+/* Text highlight */
+.text-highlight {
+  color: #A78BFA;
 }

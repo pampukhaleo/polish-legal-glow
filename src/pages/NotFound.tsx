@@ -15,12 +15,12 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center dark-purple-gradient">
-      <div className="text-center p-8 bg-[#2D3748] border border-[#6E59A5] rounded-xl max-w-md">
+    <div className="min-h-screen flex items-center justify-center bg-[#0F1729]">
+      <div className="text-center p-8 bg-[#1F1F3A] border border-[#533483] rounded-xl max-w-md shadow-lg">
         <h1 className="text-6xl font-bold mb-4 text-white font-serif">404</h1>
-        <p className="text-xl text-[#D6BCFA] mb-6">Page not found</p>
-        <p className="text-[#9b87f5] mb-8">The page you are looking for doesn't exist or has been moved.</p>
-        <Button asChild className="inline-flex items-center purple-gradient text-white hover:opacity-90">
+        <p className="text-xl text-[#A78BFA] mb-6">Page not found</p>
+        <p className="text-[#A78BFA] mb-8">The page you are looking for doesn't exist or has been moved.</p>
+        <Button asChild className="inline-flex items-center button-gradient text-white hover:opacity-90">
           <a href="/">
             <Home className="mr-2 h-4 w-4" />
             Return to Home
