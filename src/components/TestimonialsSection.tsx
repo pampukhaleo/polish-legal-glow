@@ -26,20 +26,20 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-4">Відгуки клієнтів</h2>
-          <p className="text-[#A78BFA] max-w-2xl mx-auto">
+          <p className="text-[#60A5FA] max-w-2xl mx-auto">
             Дізнайтеся, що клієнти говорять про мої юридичні послуги та відданість справі.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-[#1F1F3A] border-[#533483] relative overflow-hidden h-full shadow-md">
+            <Card key={index} className="bg-[#1F1F3A] border-[#1E40AF] relative overflow-hidden h-full shadow-md">
               <CardContent className="pt-10 pb-6 px-5 flex flex-col h-full">
-                <Quote className="absolute top-4 right-4 h-6 w-6 text-[#A78BFA]" />
-                <p className="text-[#A78BFA] mb-6 flex-grow italic">"{testimonial.quote}"</p>
+                <Quote className="absolute top-4 right-4 h-6 w-6 text-[#60A5FA]" />
+                <p className="text-[#60A5FA] mb-6 flex-grow italic">"{testimonial.quote}"</p>
                 <div>
                   <p className="text-white font-medium">{testimonial.author}</p>
-                  <p className="text-[#A78BFA] text-sm">{testimonial.position}</p>
+                  <p className="text-[#60A5FA] text-sm">{testimonial.position}</p>
                 </div>
               </CardContent>
             </Card>

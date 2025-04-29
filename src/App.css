@@ -1,5 +1,5 @@
 
-/* Dark theme styles with deep navy-purple backgrounds */
+/* Dark theme styles with deep navy backgrounds */
 html {
   scroll-behavior: smooth;
 }
@@ -27,12 +27,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #533483; /* Deep purple for thumb */
+  background-color: #1E40AF; /* Deep blue for thumb */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #8367C7; /* Lighter purple for hover */
+  background-color: #3B82F6; /* Lighter blue for hover */
 }
 
 /* Smooth transition for hover effects */
@@ -44,7 +44,7 @@ a, button {
 .glass-panel {
   backdrop-filter: blur(8px);
   background-color: rgba(15, 23, 41, 0.8); /* Dark navy with opacity */
-  border: 1px solid rgba(83, 52, 131, 0.3); /* Deep purple with opacity */
+  border: 1px solid rgba(30, 64, 175, 0.3); /* Deep blue with opacity */
 }
 
 /* Section transitions */
@@ -54,21 +54,21 @@ section {
 
 /* Focus styles for accessibility */
 :focus {
-  outline: 2px solid rgba(131, 103, 199, 0.5); /* Purple with opacity */
+  outline: 2px solid rgba(59, 130, 246, 0.5); /* Blue with opacity */
   outline-offset: 2px;
 }
 
 /* Add dark gradients backgrounds */
-.purple-gradient {
-  background: linear-gradient(135deg, #533483 0%, #8367C7 100%);
+.blue-gradient {
+  background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
 }
 
-.dark-purple-gradient {
+.dark-blue-gradient {
   background: linear-gradient(135deg, #0F1729 0%, #16213E 100%);
 }
 
-.burgundy-gradient {
-  background: linear-gradient(135deg, #4B0082 0%, #800020 100%);
+.navy-gradient {
+  background: linear-gradient(135deg, #0C2461 0%, #1E3799 100%);
 }
 
 /* Dark navy navigation */
@@ -76,7 +76,7 @@ section {
   background: linear-gradient(180deg, #0F1729 0%, #16213E 100%);
 }
 
-/* Service card gradient - keeping this one as you mentioned you like it */
+/* Service card gradient - keeping with dark blues */
 .service-card-gradient {
   background: linear-gradient(135deg, #1F1F3A 0%, #242456 100%);
 }
@@ -88,12 +88,12 @@ section {
 
 /* Button gradient */
 .button-gradient {
-  background: linear-gradient(135deg, #533483 0%, #8367C7 100%);
+  background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
 }
 
 /* Text highlight */
 .text-highlight {
-  color: #A78BFA;
+  color: #60A5FA;
 }
 
 /* Dark navy sections */

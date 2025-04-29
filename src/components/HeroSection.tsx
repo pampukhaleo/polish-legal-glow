@@ -19,21 +19,21 @@ const HeroSection = () => {
                 Записатись на консультацію
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="text-[#A78BFA] border-[#533483] hover:bg-[#533483] hover:text-white">
+              <Button variant="outline" className="text-[#60A5FA] border-[#1E40AF] hover:bg-[#1E40AF] hover:text-white">
                 Переглянути послуги
               </Button>
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden rounded-xl border-4 border-[#533483]">
+            <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden rounded-xl border-4 border-[#1E40AF]">
               <div className="absolute inset-0 bg-gradient-to-b from-[#16213E]/20 to-[#16213E]/80"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                 <p className="font-serif text-lg">Геннадій Пампуха</p>
-                <p className="text-sm text-[#A78BFA]">Міжнародний арбітр, Судовий Експерт</p>
+                <p className="text-sm text-[#60A5FA]">Міжнародний арбітр, Судовий Експерт</p>
               </div>
               {/* Replace with actual image path when available */}
               <div className="w-full h-full bg-[#1F1F3A] flex items-center justify-center">
-                <p className="text-[#A78BFA] text-sm">Professional photo placeholder</p>
+                <p className="text-[#60A5FA] text-sm">Professional photo placeholder</p>
               </div>
             </div>
           </div>
