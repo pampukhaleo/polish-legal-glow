@@ -16,8 +16,6 @@ const PartnerPage = () => {
     return <NotFound />;
   }
 
-  console.log(partner.image)
-
   return (
     <div className="min-h-screen bg-[#0F1729]">
       <Navbar />
@@ -25,7 +23,7 @@ const PartnerPage = () => {
         <div className="max-w-3xl mx-auto">
           <div className="flex flex-col items-center gap-4 mb-12 text-center">
             <Avatar className="h-32 w-32 border-2 border-[#333333]">
-              <AvatarImage src={partner.image} alt={partner.name} />
+              <AvatarImage src={`/${partner.image}`} alt={partner.name} />
               <AvatarFallback className="text-2xl bg-[#1F1F3A] text-[#aaadb0]">
                 {partner.name.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
