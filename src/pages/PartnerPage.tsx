@@ -16,6 +16,8 @@ const PartnerPage = () => {
     return <NotFound />;
   }
 
+  console.log(partner.image)
+
   return (
     <div className="min-h-screen bg-[#0F1729]">
       <Navbar />
