@@ -1,5 +1,5 @@
 
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { partners } from '@/data/partners';
 import NotFound from './NotFound';
 import Navbar from '@/components/Navbar';
@@ -7,10 +7,17 @@ import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import { services } from '@/data/services';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useEffect } from 'react';
 
 const PartnerPage = () => {
   const { id } = useParams();
+  const location = useLocation();
   const partner = partners.find((p) => p.id === id);
+
+  // Scroll to top when the page or route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   if (!partner) {
     return <NotFound />;
@@ -23,7 +30,7 @@ const PartnerPage = () => {
         <div className="max-w-3xl mx-auto">
           <div className="flex flex-col items-center gap-4 mb-12 text-center">
             <Avatar className="h-32 w-32 border-2 border-[#333333]">
-              <AvatarImage src={`/${partner.image}`} alt={partner.name} />
+              <AvatarImage src={partner.image} alt={partner.name} />
               <AvatarFallback className="text-2xl bg-[#1F1F3A] text-[#aaadb0]">
                 {partner.name.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
