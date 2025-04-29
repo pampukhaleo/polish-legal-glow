@@ -20,7 +20,7 @@ const PartnersSection = () => {
             <Link to={ `/partners/${ partner.id }` } key={ partner.id } className="no-underline">
               <Card className="max-w-sm mx-auto h-full flex flex-col service-card-gradient border-[#333333] hover:border-[#60A5FA] transition-all shadow-md">
               <CardHeader className="items-center pt-6 pb-4">
-                  <Avatar className="h-32 w-32 border-2 border-[#333333] rounded-none mb-4 overflow-hidden items-start">
+                  <Avatar className="w-[200px] h-[250px] border-2 border-[#333333] rounded-none mb-4 overflow-hidden items-start">
                     <AvatarImage
                       src={ partner.image }
                       alt={ partner.name }

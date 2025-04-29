@@ -26,15 +26,17 @@ const HeroSection = () => {
           </div>
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
             <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden rounded-xl border-4 border-[#333333]">
-              <div className="absolute inset-0 bg-gradient-to-b from-[#16213E]/20 to-[#16213E]/80"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-[#16213E]/10 to-[#16213E]/30"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                 <p className="font-serif text-lg">Геннадій Пампуха</p>
                 <p className="text-sm text-[#aaadb0]">Міжнародний арбітр, Судовий Експерт</p>
               </div>
               {/* Replace with actual image path when available */}
-              <div className="w-full h-full bg-[#1F1F3A] flex items-center justify-center">
-                <p className="text-[#aaadb0] text-sm">Professional photo placeholder</p>
-              </div>
+              <img
+                src={ `${ import.meta.env.BASE_URL }gennadiy.png` }
+                alt="Геннадій Пампуха"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

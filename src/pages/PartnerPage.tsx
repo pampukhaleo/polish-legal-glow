@@ -29,12 +29,19 @@ const PartnerPage = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-3xl mx-auto">
           <div className="flex flex-col items-center gap-4 mb-12 text-center">
-            <Avatar className="h-32 w-32 border-2 border-[#333333]">
-              <AvatarImage src={partner.image} alt={partner.name} />
+            <Avatar className="w-[300px] h-[350px] rounded-none border-2 border-[#333333] overflow-hidden mx-auto">
+              <AvatarImage
+                src={`${import.meta.env.BASE_URL}${partner.image}`}
+                alt={partner.name}
+                className="object-cover w-full h-full"
+              />
               <AvatarFallback className="text-2xl bg-[#1F1F3A] text-[#aaadb0]">
                 {partner.name.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
             </Avatar>
+
+
+
             <div>
               <h1 className="text-4xl font-bold text-white font-serif">{partner.name}</h1>
               <p className="text-[#60A5FA] mt-2">{partner.role}</p>
