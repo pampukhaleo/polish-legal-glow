@@ -9,7 +9,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-4">Юридичні послуги</h2>
-          <p className="text-[#60A5FA] max-w-2xl mx-auto">
+          <p className="text-[#aaadb0] max-w-2xl mx-auto">
             Комплексні юридичні рішення для українських громадян та бізнесу, що працюють у Польщі, Україні та країн Європи.
           </p>
         </div>
@@ -17,7 +17,7 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Link to={`/services/${service.slug}`} key={index} className="no-underline">
-              <Card className="service-card-gradient border-[#1E40AF] hover:border-[#60A5FA] transition-all h-full shadow-md">
+              <Card className="service-card-gradient border-[#333333] hover:border-[#60A5FA] transition-all h-full shadow-md">
                 <CardHeader className="pb-2">
                   <div className="h-12 w-12 rounded-lg button-gradient flex items-center justify-center mb-4">
                     <service.icon className="h-6 w-6 text-white" />
@@ -25,7 +25,7 @@ const ServicesSection = () => {
                   <CardTitle className="text-xl text-white font-serif">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[#60A5FA]">{service.description}</CardDescription>
+                  <CardDescription className="text-[#aaadb0]">{service.description}</CardDescription>
                 </CardContent>
               </Card>
             </Link>
