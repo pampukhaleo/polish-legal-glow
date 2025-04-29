@@ -1,11 +1,11 @@
 
-/* Dark theme styles with deep blue-purple backgrounds */
+/* Dark theme styles with deep navy-purple backgrounds */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #1A1A2E; /* Dark blue-purple background */
+  background-color: #0F1729; /* Dark navy background */
   color: #f8fafc; /* Light text */
   font-family: 'Inter', sans-serif;
 }
@@ -23,7 +23,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #16213E; /* Darker track */
+  background: #0F1729; /* Darker track */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -43,7 +43,7 @@ a, button {
 /* Glass effect for certain elements */
 .glass-panel {
   backdrop-filter: blur(8px);
-  background-color: rgba(26, 26, 46, 0.8); /* Dark blue with opacity */
+  background-color: rgba(15, 23, 41, 0.8); /* Dark navy with opacity */
   border: 1px solid rgba(83, 52, 131, 0.3); /* Deep purple with opacity */
 }
 
@@ -64,26 +64,26 @@ section {
 }
 
 .dark-purple-gradient {
-  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+  background: linear-gradient(135deg, #0F1729 0%, #16213E 100%);
 }
 
 .burgundy-gradient {
   background: linear-gradient(135deg, #4B0082 0%, #800020 100%);
 }
 
-/* New dark blue navigation */
+/* Dark navy navigation */
 .dark-nav-gradient {
-  background: linear-gradient(180deg, #0F1729 0%, #1A1A2E 100%);
+  background: linear-gradient(180deg, #0F1729 0%, #16213E 100%);
 }
 
-/* Service card gradient */
+/* Service card gradient - keeping this one as you mentioned you like it */
 .service-card-gradient {
   background: linear-gradient(135deg, #1F1F3A 0%, #242456 100%);
 }
 
 /* Testimonial section */
 .testimonial-gradient {
-  background: linear-gradient(135deg, #371B58 0%, #4C3575 100%);
+  background: linear-gradient(135deg, #0C1220 0%, #16213E 100%);
 }
 
 /* Button gradient */
@@ -94,4 +94,14 @@ section {
 /* Text highlight */
 .text-highlight {
   color: #A78BFA;
+}
+
+/* Dark navy sections */
+.dark-navy-bg {
+  background-color: #0F1729;
+}
+
+/* Secondary navy background */
+.navy-secondary-bg {
+  background-color: #16213E;
 }

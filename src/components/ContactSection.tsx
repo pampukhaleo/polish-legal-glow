@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-16 dark-purple-gradient">
+    <section id="contact" className="py-16 bg-[#16213E]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
@@ -79,7 +79,7 @@ const ContactSection = () => {
                     <Input 
                       id="name"
                       placeholder="Ваше ім'я"
-                      className="bg-[#16213E] border-[#533483] text-white focus:border-[#A78BFA]"
+                      className="bg-[#0F1729] border-[#533483] text-white focus:border-[#A78BFA]"
                     />
                   </div>
                   <div>
@@ -88,7 +88,7 @@ const ContactSection = () => {
                       id="email"
                       type="email"
                       placeholder="Ваш email"
-                      className="bg-[#16213E] border-[#533483] text-white focus:border-[#A78BFA]"
+                      className="bg-[#0F1729] border-[#533483] text-white focus:border-[#A78BFA]"
                     />
                   </div>
                 </div>
@@ -98,7 +98,7 @@ const ContactSection = () => {
                   <Input 
                     id="subject"
                     placeholder="Як я можу допомогти?"
-                    className="bg-[#16213E] border-[#533483] text-white focus:border-[#A78BFA]"
+                    className="bg-[#0F1729] border-[#533483] text-white focus:border-[#A78BFA]"
                   />
                 </div>
                 
@@ -108,7 +108,7 @@ const ContactSection = () => {
                     id="message"
                     placeholder="Ваше повідомлення..."
                     rows={5}
-                    className="bg-[#16213E] border-[#533483] text-white resize-none focus:border-[#A78BFA]"
+                    className="bg-[#0F1729] border-[#533483] text-white resize-none focus:border-[#A78BFA]"
                   />
                 </div>
                 

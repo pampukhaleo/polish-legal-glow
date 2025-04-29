@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="about" className="pt-24 pb-12 md:py-32 relative dark-purple-gradient">
+    <section id="about" className="pt-24 pb-12 md:py-32 relative bg-[#0F1729]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1">
