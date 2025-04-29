@@ -1,6 +1,4 @@
 
-import { StaticImageData } from 'next/image';
-
 export interface Partner {
   id: string;
   name: string;
