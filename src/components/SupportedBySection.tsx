@@ -5,18 +5,18 @@ const SupportedBySection = () => {
   const partnerLogos = [
     {
       id: 1,
-      name: "Адвокатське бюро 'Принцип'",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/aecd588b-8a2b-49db-80b3-4a2dcf14ca9e.png`
+      name: 'Адвокатське бюро "Принцип"',
+      image: `${import.meta.env.BASE_URL}principaologo.png`
     },
     {
       id: 2,
       name: "Незалежний інститут Судових Експертиз",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/297caf42-fc3a-46f0-9cd3-ad70cf8e35ff.png`
+      image: `${import.meta.env.BASE_URL}logonise.png`
     },
     {
       id: 3,
-      name: "Европейська Арбітражна Палата Брюсель Бельгія",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/027e0d20-f2d8-4e87-99cc-f93a09016479.png`
+      name: "Европейська Арбітражна Палата. Брюсель, Бельгія",
+      image: `${import.meta.env.BASE_URL}cheataiclogo.png`
     }
   ];
 
@@ -28,20 +28,19 @@ const SupportedBySection = () => {
             Послуги надаються при підтримці:
           </h2>
         </div>
-        
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 flex-wrap">
-          {partnerLogos.map((partner) => (
-            <div key={partner.id} className="flex flex-col items-center">
-              <div className="bg-white rounded-lg p-4 flex items-center justify-center h-32 w-full md:w-64">
-                <img 
-                  src={partner.image} 
-                  alt={partner.name} 
-                  className="max-h-full max-w-full object-contain"
+        <div className="flex flex-row md:flex-row justify-center items-cetner md:items-start gap-8 md:gap-12 flex-wrap">
+          { partnerLogos.map((partner) => (
+            <div key={ partner.id } className="flex flex-col items-center w-64">
+              <div className="bg-white rounded-lg p-4 flex items-center justify-center w-full h-24">
+                <img
+                  src={ partner.image }
+                  alt={ partner.name }
+                  className="h-full object-contain"
                 />
               </div>
-              <p className="text-[#aaadb0] mt-3 text-center text-sm max-w-64">{partner.name}</p>
+              <p className="text-[#aaadb0] mt-3 text-center text-sm">{ partner.name }</p>
             </div>
-          ))}
+          )) }
         </div>
       </div>
     </section>
