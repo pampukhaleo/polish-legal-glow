@@ -31,19 +31,19 @@ const ServicePage = () => {
           
           <div className="prose prose-invert max-w-none">
             <p className="text-xl text-[#aaadb0] mb-8">{service.description}</p>
-            
+
             <div className="bg-[#1F1F3A] border border-[#333333] rounded-lg p-8 mt-8 shadow-md">
               <h2 className="text-2xl font-bold text-white mb-4">Наші послуги включають:</h2>
-              <p className="text-[#aaadb0]">
-                Детальна інформація про цей вид послуг буде додана найближчим часом. 
-                Для отримання додаткової інформації, будь ласка, зв'яжіться з нами.
+              <p className="text-[#aaadb0] whitespace-pre-line" style={ { lineHeight: '1.6' } }>
+                { service.fullDescription }
               </p>
             </div>
+
 
             <div className="mt-12">
               <h3 className="text-2xl font-bold text-white mb-6">Інші послуги:</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {otherServices.map((otherService) => (
+                { otherServices.map((otherService) => (
                   <Link
                     key={otherService.slug}
                     to={`/services/${otherService.slug}`}
