@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { supabase } from "@/integrations/supabase/client";
 
 // Form validation schema
 const formSchema = z.object({
@@ -38,17 +38,13 @@ const ContactSection = () => {
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
     try {
-      // We'll use a proxy endpoint instead of exposing the token directly
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
+      // Call the Supabase Edge Function to send the message to Telegram
+      const { error } = await supabase.functions.invoke('contact-form', {
+        body: values
       });
 
-      if (!response.ok) {
-        throw new Error("Сталася помилка при надсиланні форми");
+      if (error) {
+        throw new Error(error.message);
       }
 
       // Reset form on successful submission
