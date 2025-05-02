@@ -3,8 +3,72 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useForm } from "react-hook-form";
+import { toast } from "@/hooks/use-toast";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+// Form validation schema
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Ім'я має містити щонайменше 2 символи" }),
+  email: z.string().email({ message: "Введіть дійсну email адресу" }),
+  subject: z.string().min(3, { message: "Тема має містити щонайменше 3 символи" }),
+  message: z.string().min(10, { message: "Повідомлення має містити щонайменше 10 символів" }),
+});
+
+type FormValues = z.infer<typeof formSchema>;
 
 const ContactSection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Initialize the form
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  // Handle form submission
+  const onSubmit = async (values: FormValues) => {
+    setIsSubmitting(true);
+    try {
+      // We'll use a proxy endpoint instead of exposing the token directly
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("Сталася помилка при надсиланні форми");
+      }
+
+      // Reset form on successful submission
+      form.reset();
+      toast({
+        title: "Успіх!",
+        description: "Ваше повідомлення успішно надіслано. Ми зв'яжемося з вами найближчим часом.",
+      });
+    } catch (error) {
+      toast({
+        title: "Помилка",
+        description: "Не вдалося надіслати повідомлення. Будь ласка, спробуйте пізніше.",
+        variant: "destructive",
+      });
+      console.error("Error sending message:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-16 bg-[#16213E]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,52 +136,95 @@ const ContactSection = () => {
             <div className="lg:col-span-3 bg-[#1F1F3A] border border-[#333333] rounded-lg p-6 shadow-md">
               <h3 className="text-xl font-serif text-white mb-6">Надіслати повідомлення</h3>
               
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm text-[#aaadb0] mb-1">Повне ім'я</label>
-                    <Input 
-                      id="name"
-                      placeholder="Ваше ім'я"
-                      className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-sm text-[#aaadb0]">Повне ім'я</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Ваше ім'я" 
+                              className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage className="text-red-400" />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-sm text-[#aaadb0]">Email адреса</FormLabel>
+                          <FormControl>
+                            <Input 
+                              type="email"
+                              placeholder="Ваш email" 
+                              className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage className="text-red-400" />
+                        </FormItem>
+                      )}
                     />
                   </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm text-[#aaadb0] mb-1">Email адреса</label>
-                    <Input 
-                      id="email"
-                      type="email"
-                      placeholder="Ваш email"
-                      className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
-                    />
+                  
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm text-[#aaadb0]">Тема</FormLabel>
+                        <FormControl>
+                          <Input 
+                            placeholder="Як я можу допомогти?" 
+                            className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm text-[#aaadb0]">Повідомлення</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Ваше повідомлення..."
+                            rows={5}
+                            className="bg-[#0F1729] border-[#333333] text-white resize-none focus:border-[#60A5FA]"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <div className="pt-2">
+                    <Button 
+                      type="submit" 
+                      className="button-gradient text-white hover:opacity-90 w-full md:w-auto"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Надсилання...' : 'Надіслати повідомлення'}
+                    </Button>
                   </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm text-[#aaadb0] mb-1">Тема</label>
-                  <Input 
-                    id="subject"
-                    placeholder="Як я можу допомогти?"
-                    className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm text-[#aaadb0] mb-1">Повідомлення</label>
-                  <Textarea 
-                    id="message"
-                    placeholder="Ваше повідомлення..."
-                    rows={5}
-                    className="bg-[#0F1729] border-[#333333] text-white resize-none focus:border-[#60A5FA]"
-                  />
-                </div>
-                
-                <div className="pt-2">
-                  <Button className="button-gradient text-white hover:opacity-90 w-full md:w-auto">
-                    Надіслати повідомлення
-                  </Button>
-                </div>
-              </form>
+                </form>
+              </Form>
             </div>
           </div>
         </div>
