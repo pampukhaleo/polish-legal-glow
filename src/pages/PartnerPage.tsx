@@ -31,7 +31,7 @@ const PartnerPage = () => {
           <div className="flex flex-col items-center gap-4 mb-12 text-center">
             <Avatar className="w-[300px] h-[350px] rounded-none border-2 border-[#333333] overflow-hidden mx-auto">
               <AvatarImage
-                src={`${import.meta.env.BASE_URL}${partner.image}`}
+                src={partner.image}
                 alt={partner.name}
                 className="object-cover w-full h-full"
               />
@@ -39,8 +39,6 @@ const PartnerPage = () => {
                 {partner.name.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
             </Avatar>
-
-
 
             <div>
               <h1 className="text-4xl font-bold text-white font-serif">{partner.name}</h1>

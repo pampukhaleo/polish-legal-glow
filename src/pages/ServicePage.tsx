@@ -1,14 +1,21 @@
 
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { services } from '@/data/services';
 import NotFound from './NotFound';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const ServicePage = () => {
   const { slug } = useParams();
+  const location = useLocation();
   const service = services.find((s) => s.slug === slug);
+
+  // Scroll to top when the page changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   if (!service) {
     return <NotFound />;
@@ -38,7 +45,6 @@ const ServicePage = () => {
                 { service.fullDescription }
               </p>
             </div>
-
 
             <div className="mt-12">
               <h3 className="text-2xl font-bold text-white mb-6">Інші послуги:</h3>
