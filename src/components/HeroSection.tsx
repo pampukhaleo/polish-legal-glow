@@ -19,9 +19,6 @@ const HeroSection = () => {
                 Записатись на консультацію
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="text-[#60A5FA] border-[#333333] hover:bg-[#1E40AF] hover:text-white">
-                Переглянути послуги
-              </Button>
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center md:justify-end">

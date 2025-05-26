@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link to="/" className="text-white font-serif text-xl font-bold hover:text-[#60A5FA] transition-colors">
-                Hennadii Pampukha
+                Міжнародний Юридичний та Експертний Консалт
               </Link>
             </div>
           </div>

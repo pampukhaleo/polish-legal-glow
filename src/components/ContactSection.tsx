@@ -86,7 +86,7 @@ const ContactSection = () => {
                     <Mail className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5" />
                     <div>
                       <p className="text-sm text-[#aaadb0]">Email</p>
-                      <p className="text-white">contact@genadii.pl</p>
+                      <p className="text-white">pampukha@chea-taic.be</p>
                     </div>
                   </div>
                   
@@ -94,7 +94,7 @@ const ContactSection = () => {
                     <Phone className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5" />
                     <div>
                       <p className="text-sm text-[#aaadb0]">Телефон</p>
-                      <p className="text-white">+48 123 456 789</p>
+                      <p className="text-white">+48 539 240 846</p>
                     </div>
                   </div>
                   
@@ -102,8 +102,10 @@ const ContactSection = () => {
                     <MapPin className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5" />
                     <div>
                       <p className="text-sm text-[#aaadb0]">Адреса офісу</p>
-                      <p className="text-white">вул. Нови Свят 45</p>
-                      <p className="text-white">00-029 Варшава, Польща</p>
+                      <p className="text-white">J.Hallera 1/20</p>
+                      <p className="text-white">45867 Opole, Poland</p>
+                      <p className="text-white">вул. Левка Лук'яненка, 21, к. 3, офіс 7</p>
+                      <p className="text-white">04207, Україна, м. Київ, Україна</p>
                     </div>
                   </div>
                   
@@ -111,7 +113,7 @@ const ContactSection = () => {
                     <Clock className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5" />
                     <div>
                       <p className="text-sm text-[#aaadb0]">Години роботи</p>
-                      <p className="text-white">Понеділок - П'ятниця: 9:00 - 17:00</p>
+                      <p className="text-white">Понеділок - П'ятниця: 10:00 - 17:00</p>
                       <p className="text-white">Субота: За попереднім записом</p>
                     </div>
                   </div>
