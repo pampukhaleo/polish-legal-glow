@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="about" className="pt-24 pb-12 md:py-32 relative bg-[#0F1729]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +22,10 @@ const HeroSection = () => {
               Адвокатські послуги та Юридичні консультації з українського та європейскького законодавств. Супровід та проведення судових експертиз в Україні та Європі.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="button-gradient text-white hover:opacity-90 font-medium py-2">
+              <Button 
+                onClick={scrollToContact}
+                className="button-gradient text-white hover:opacity-90 font-medium py-2"
+              >
                 Записатись на консультацію
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

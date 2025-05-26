@@ -8,13 +8,29 @@ import AnchorLink from "@/components/AnchorLink";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#0F1729] border-b border-[#333333]/30 shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link to="/" className="text-white font-serif text-xl font-bold hover:text-[#60A5FA] transition-colors">
+              <Link 
+                to="/" 
+                onClick={handleLogoClick}
+                className="text-white font-serif text-xl font-bold hover:text-[#60A5FA] transition-colors"
+              >
                 Міжнародний Юридичний та Експертний Консалт
               </Link>
             </div>
@@ -35,7 +51,10 @@ const Navbar = () => {
                 Контакти
               </AnchorLink>
 
-              <Button className="ml-4 button-gradient text-white hover:opacity-90">
+              <Button 
+                onClick={scrollToContact}
+                className="ml-4 button-gradient text-white hover:opacity-90"
+              >
                 Записатись на консультацію
               </Button>
             </div>
@@ -70,7 +89,10 @@ const Navbar = () => {
               Контакти
             </AnchorLink>
             <div className="pt-2">
-              <Button className="w-full button-gradient text-white hover:opacity-90">
+              <Button 
+                onClick={scrollToContact}
+                className="w-full button-gradient text-white hover:opacity-90"
+              >
                 Записатись на консультацію
               </Button>
             </div>
