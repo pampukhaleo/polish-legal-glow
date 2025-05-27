@@ -10,7 +10,7 @@ const ServicesSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-4">Юридичні послуги</h2>
           <p className="text-[#aaadb0] max-w-2xl mx-auto">
-            Комплексні юридичні рішення для українських громадян та бізнесу, що працюють у Польщі, Україні та країн Європи.
+            Комплексні юридичні рішення для українських громадян та бізнесу, що працюють у Польщі, Україні та країнах Європи.
           </p>
         </div>
         

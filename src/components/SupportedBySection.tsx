@@ -5,17 +5,17 @@ const SupportedBySection = () => {
   const partnerLogos = [
     {
       id: 1,
-      name: 'Адвокатське бюро "Принцип"',
+      name: 'Адвокатське об\'єднання "Принцип" (Київ, Україна)',
       image: `${import.meta.env.BASE_URL}principaologo.png`
     },
     {
       id: 2,
-      name: "Незалежний інститут Судових Експертиз",
+      name: "Незалежний інститут судових експертиз НІСЕ (Київ, Україна)",
       image: `${import.meta.env.BASE_URL}logonise.png`
     },
     {
       id: 3,
-      name: "Европейська Арбітражна Палата. Брюсель, Бельгія",
+      name: "Європейська Арбітражна Палата (Брюссель, Бельгія)",
       image: `${import.meta.env.BASE_URL}cheataiclogo.png`
     }
   ];
@@ -25,7 +25,7 @@ const SupportedBySection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-white font-serif mb-4">
-            Послуги надаються при підтримці:
+            Послуги надаються за підтримки:
           </h2>
         </div>
         <div className="flex flex-row md:flex-row justify-center items-cetner md:items-start gap-8 md:gap-12 flex-wrap">
