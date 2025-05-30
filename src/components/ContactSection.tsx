@@ -80,37 +80,45 @@ const ContactSection = () => {
             <div className="lg:col-span-2 space-y-6">
               <div className="bg-[#1F1F3A] border border-[#333333] rounded-lg p-6 shadow-md">
                 <h3 className="text-xl font-serif text-white mb-6">Контактна інформація</h3>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <Mail className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5" />
+                    <Mail className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5"/>
                     <div>
                       <p className="text-sm text-[#aaadb0]">Email</p>
-                      <p className="text-white">pampukha@chea-taic.be</p>
+                      <p className="text-white">info@chea-taic.be</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
-                    <Phone className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5" />
+                    <Phone className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5"/>
                     <div>
                       <p className="text-sm text-[#aaadb0]">Телефон</p>
                       <p className="text-white">+48 539 240 846</p>
+                      <p className="text-white">+380 50 413 03 93</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
-                    <MapPin className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5" />
+                    <MapPin className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5"/>
                     <div>
-                      <p className="text-sm text-[#aaadb0]">Адреса офісу</p>
+                      <p className="text-sm text-[#aaadb0]">Предствавництво в Польщі</p>
                       <p className="text-white">J.Hallera 1/20</p>
                       <p className="text-white">45867 Opole, Poland</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <MapPin className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5"/>
+                    <div>
+                      <p className="text-sm text-[#aaadb0]">Предствавництво в Україні</p>
                       <p className="text-white">вул. Левка Лук'яненка, 21, к. 3, офіс 7</p>
                       <p className="text-white">04207, Україна, м. Київ, Україна</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
-                    <Clock className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5" />
+                    <Clock className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5"/>
                     <div>
                       <p className="text-sm text-[#aaadb0]">Години роботи</p>
                       <p className="text-white">Понеділок - П'ятниця: 10:00 - 17:00</p>
@@ -119,18 +127,18 @@ const ContactSection = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-[#1F1F3A] border border-[#333333] rounded-lg p-6 shadow-md">
                 <h3 className="text-xl font-serif text-white mb-3">Мови</h3>
                 <div className="space-y-2">
-                  <p className="text-white">Українська - Рідна</p>
+                  <p className="text-white">Українська - Вільно</p>
+                  <p className="text-white">Російська - Вільно</p>
                   <p className="text-white">Польська - Вільно</p>
                   <p className="text-white">Англійська - Вільно</p>
-                  <p className="text-white">Російська - Вільно</p>
                 </div>
               </div>
             </div>
-            
+
             <div className="lg:col-span-3 bg-[#1F1F3A] border border-[#333333] rounded-lg p-6 shadow-md">
               <h3 className="text-xl font-serif text-white mb-6">Надіслати повідомлення</h3>
               
