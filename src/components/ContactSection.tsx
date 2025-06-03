@@ -40,7 +40,10 @@ const ContactSection = () => {
     try {
       // Call the Supabase Edge Function to send the message to Telegram
       const { error } = await supabase.functions.invoke('contact-form', {
-        body: values
+        body: {
+          ...values,
+          companyName: 'GG POLAND'
+        }
       });
 
       if (error) {
