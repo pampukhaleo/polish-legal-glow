@@ -31,32 +31,32 @@ const Navbar = () => {
                 onClick={handleLogoClick}
                 className="text-white font-serif font-bold hover:text-[#60A5FA] transition-colors block"
               >
-                <span className="text-sm sm:text-base lg:text-xl leading-tight whitespace-nowrap overflow-hidden">
-                  <span className="block sm:inline">Міжнародний Юридичний</span>
-                  <span className="block sm:inline sm:ml-1">та Експертний Консалт</span>
+                <span className="text-sm sm:text-base lg:text-xl leading-tight">
+                  <span className="block lg:inline">Міжнародний Юридичний</span>
+                  <span className="block lg:inline lg:ml-1">та Експертний Консалт</span>
                 </span>
               </Link>
             </div>
           </div>
           
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link to="/about" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium whitespace-nowrap">
+            <div className="ml-4 lg:ml-10 flex items-baseline space-x-2 lg:space-x-4">
+              <Link to="/about" className="text-[#aaadb0] hover:text-[#60A5FA] px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium whitespace-nowrap">
                 Про мене
               </Link>
-              <AnchorLink to="services" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium whitespace-nowrap">
+              <AnchorLink to="services" className="text-[#aaadb0] hover:text-[#60A5FA] px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium whitespace-nowrap">
                 Послуги
               </AnchorLink>
-              <AnchorLink to="testimonials" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium whitespace-nowrap">
+              <AnchorLink to="testimonials" className="text-[#aaadb0] hover:text-[#60A5FA] px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium whitespace-nowrap">
                 Відгуки
               </AnchorLink>
-              <AnchorLink to="contact" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium whitespace-nowrap">
+              <AnchorLink to="contact" className="text-[#aaadb0] hover:text-[#60A5FA] px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium whitespace-nowrap">
                 Контакти
               </AnchorLink>
 
               <Button 
                 onClick={scrollToContact}
-                className="ml-4 button-gradient text-white hover:opacity-90 whitespace-nowrap"
+                className="ml-2 lg:ml-4 button-gradient text-white hover:opacity-90 whitespace-nowrap text-xs lg:text-sm px-3 lg:px-4 py-1.5 lg:py-2"
               >
                 Записатись на консультацію
               </Button>
