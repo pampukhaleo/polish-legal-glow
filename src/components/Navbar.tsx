@@ -24,24 +24,16 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-[#0F1729] border-b border-[#333333]/30 shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
+          <div className="flex items-center flex-shrink-0 min-w-0">
+            <div className="flex-shrink-0 min-w-0">
               <Link 
                 to="/" 
                 onClick={handleLogoClick}
-                className="text-white font-serif font-bold hover:text-[#60A5FA] transition-colors"
+                className="text-white font-serif font-bold hover:text-[#60A5FA] transition-colors block"
               >
-                {/* Full title for desktop */}
-                <span className="hidden lg:block text-xl">
-                  Міжнародний Юридичний та Експертний Консалт
-                </span>
-                {/* Medium title for tablet */}
-                <span className="hidden md:block lg:hidden text-lg">
-                  Міжнародний Юридичний Консалт
-                </span>
-                {/* Multi-line title for mobile */}
-                <span className="block md:hidden text-sm leading-tight">
-                  Міжнародний Юридичний<br />та Експертний Консалт
+                <span className="text-sm sm:text-base lg:text-xl leading-tight whitespace-nowrap overflow-hidden">
+                  <span className="block sm:inline">Міжнародний Юридичний</span>
+                  <span className="block sm:inline sm:ml-1">та Експертний Консалт</span>
                 </span>
               </Link>
             </div>
