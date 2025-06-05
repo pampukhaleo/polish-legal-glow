@@ -41,22 +41,22 @@ const Navbar = () => {
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link to="/about" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium">
+              <Link to="/about" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium whitespace-nowrap">
                 Про мене
               </Link>
-              <AnchorLink to="services" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium">
+              <AnchorLink to="services" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium whitespace-nowrap">
                 Послуги
               </AnchorLink>
-              <AnchorLink to="testimonials" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium">
+              <AnchorLink to="testimonials" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium whitespace-nowrap">
                 Відгуки
               </AnchorLink>
-              <AnchorLink to="contact" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium">
+              <AnchorLink to="contact" className="text-[#aaadb0] hover:text-[#60A5FA] px-3 py-2 text-sm font-medium whitespace-nowrap">
                 Контакти
               </AnchorLink>
 
               <Button 
                 onClick={scrollToContact}
-                className="ml-4 button-gradient text-white hover:opacity-90"
+                className="ml-4 button-gradient text-white hover:opacity-90 whitespace-nowrap"
               >
                 Записатись на консультацію
               </Button>
