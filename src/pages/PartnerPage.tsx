@@ -4,6 +4,7 @@ import { partners } from '@/data/partners';
 import NotFound from './NotFound';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Link } from 'react-router-dom';
 import { services } from '@/data/services';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -25,6 +26,13 @@ const PartnerPage = () => {
 
   return (
     <div className="min-h-screen bg-[#0F1729]">
+      <SEOHead 
+        title={`${partner.name} | ${partner.role} - Міжнародний Юридичний та Експертний Консалт`}
+        description={`Дізнайтеся більше про ${partner.name}, ${partner.role}. ${partner.fullDescription.substring(0, 150)}...`}
+        keywords={`${partner.name}, ${partner.role}, юридичні послуги, експерт, консультації`}
+        ogImage={partner.image}
+        canonical={`/partners/${partner.id}`}
+      />
       <Navbar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-3xl mx-auto">

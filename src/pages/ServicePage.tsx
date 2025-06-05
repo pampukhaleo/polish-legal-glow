@@ -4,6 +4,7 @@ import { services } from '@/data/services';
 import NotFound from './NotFound';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -26,6 +27,12 @@ const ServicePage = () => {
 
   return (
     <div className="min-h-screen bg-[#0F1729]">
+      <SEOHead 
+        title={`${service.title} | Геннадій Пампуха - Професійні юридичні послуги`}
+        description={`${service.description} Отримайте професійну консультацію від досвідченого юриста Геннадія Пампухи.`}
+        keywords={`${service.title}, юридичні послуги, консультації, Геннадій Пампуха, польське право`}
+        canonical={`/services/${service.slug}`}
+      />
       <Navbar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-3xl mx-auto">

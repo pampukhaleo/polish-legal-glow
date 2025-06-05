@@ -1,10 +1,17 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-[#0F1729]">
+      <SEOHead 
+        title="Про мене | Геннадій Пампуха - Досвідчений юрист з міжнародного права"
+        description="Досвідчений юрист із понад 20-річним стажем у сферах господарського, цивільного та міжнародного права. Спеціалізуюся на вирішенні складних правових спорів."
+        keywords="Геннадій Пампуха, юрист, міжнародне право, досвід, освіта, кваліфікація, арбітр"
+        canonical="/about"
+      />
       <Navbar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-3xl mx-auto">
