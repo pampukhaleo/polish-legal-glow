@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -29,9 +28,20 @@ const Navbar = () => {
               <Link 
                 to="/" 
                 onClick={handleLogoClick}
-                className="text-white font-serif text-xl font-bold hover:text-[#60A5FA] transition-colors"
+                className="text-white font-serif font-bold hover:text-[#60A5FA] transition-colors"
               >
-                Міжнародний Юридичний та Експертний Консалт
+                {/* Full title for desktop */}
+                <span className="hidden lg:block text-xl">
+                  Міжнародний Юридичний та Експертний Консалт
+                </span>
+                {/* Medium title for tablet */}
+                <span className="hidden md:block lg:hidden text-lg">
+                  Міжнародний Юридичний Консалт
+                </span>
+                {/* Short title for mobile */}
+                <span className="block md:hidden text-base">
+                  МЮК
+                </span>
               </Link>
             </div>
           </div>
