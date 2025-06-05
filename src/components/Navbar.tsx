@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -38,9 +39,9 @@ const Navbar = () => {
                 <span className="hidden md:block lg:hidden text-lg">
                   Міжнародний Юридичний Консалт
                 </span>
-                {/* Short title for mobile */}
-                <span className="block md:hidden text-base">
-                  МЮК
+                {/* Multi-line title for mobile */}
+                <span className="block md:hidden text-sm leading-tight">
+                  Міжнародний Юридичний<br />та Експертний Консалт
                 </span>
               </Link>
             </div>
