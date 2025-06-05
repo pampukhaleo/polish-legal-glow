@@ -26,9 +26,9 @@ const Index = () => {
         description="Професійні юридичні послуги для українців у Польщі. Міжнародний арбітраж, імміграційні консультації, бізнес-право."
         url="https://pampukha.pl"
         address={{
-          streetAddress: "Вул. Прикладна, 1",
-          addressLocality: "Варшава",
-          addressCountry: "Польща"
+          streetAddress: "J.Hallera 1/20",
+          addressLocality: "Opole",
+          addressCountry: "Poland"
         }}
       />
       <Navbar />

@@ -26,8 +26,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center flex-shrink-0 min-w-0">
             <div className="flex-shrink-0 min-w-0">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 onClick={handleLogoClick}
                 className="text-white font-serif font-bold hover:text-[#60A5FA] transition-colors block"
               >
@@ -38,7 +38,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-4 lg:ml-10 flex items-baseline space-x-2 lg:space-x-4">
               <Link to="/about" className="text-[#aaadb0] hover:text-[#60A5FA] px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium whitespace-nowrap">
@@ -54,7 +54,7 @@ const Navbar = () => {
                 Контакти
               </AnchorLink>
 
-              <Button 
+              <Button
                 onClick={scrollToContact}
                 className="ml-2 lg:ml-4 button-gradient text-white hover:opacity-90 whitespace-nowrap text-xs lg:text-sm px-3 lg:px-4 py-1.5 lg:py-2"
               >
@@ -62,7 +62,7 @@ const Navbar = () => {
               </Button>
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -92,7 +92,7 @@ const Navbar = () => {
               Контакти
             </AnchorLink>
             <div className="pt-2">
-              <Button 
+              <Button
                 onClick={scrollToContact}
                 className="w-full button-gradient text-white hover:opacity-90"
               >
