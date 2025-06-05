@@ -1,4 +1,3 @@
-
 import { useParams, useLocation } from 'react-router-dom';
 import { partners } from '@/data/partners';
 import NotFound from './NotFound';
@@ -40,7 +39,7 @@ const PartnerPage = () => {
         description={partner.shortDescription}
         image={partner.image}
         worksFor="Геннадій Пампуха - Міжнародний Юридичний та Експертний Консалт"
-        url={`https://yourdomain.com/partners/${partner.id}`}
+        url={`https://pampukha.pl/partners/${partner.id}`}
       />
       <Navbar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">

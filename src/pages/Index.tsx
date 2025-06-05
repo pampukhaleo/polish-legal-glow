@@ -24,7 +24,7 @@ const Index = () => {
       <OrganizationStructuredData
         name="Геннадій Пампуха - Міжнародний Юридичний та Експертний Консалт"
         description="Професійні юридичні послуги для українців у Польщі. Міжнародний арбітраж, імміграційні консультації, бізнес-право."
-        url="https://yourdomain.com"
+        url="https://pampukha.pl"
         address={{
           streetAddress: "Вул. Прикладна, 1",
           addressLocality: "Варшава",

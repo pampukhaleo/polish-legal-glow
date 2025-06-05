@@ -38,7 +38,7 @@ const ServicePage = () => {
         name={service.title}
         description={service.description}
         provider="Геннадій Пампуха - Міжнародний Юридичний та Експертний Консалт"
-        url={`https://yourdomain.com/services/${service.slug}`}
+        url={`https://pampukha.pl/services/${service.slug}`}
         serviceType={service.title}
       />
       <Navbar />
