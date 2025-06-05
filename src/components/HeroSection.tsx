@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -37,15 +38,18 @@ const HeroSection = () => {
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
             <figure className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden rounded-xl border-4 border-[#333333]">
               <div className="absolute inset-0 bg-gradient-to-b from-[#16213E]/10 to-[#16213E]/30"></div>
-              <figcaption className="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <figcaption className="absolute bottom-0 left-0 right-0 p-4 text-white z-10">
                 <p className="font-serif text-lg">Геннадій Пампуха</p>
                 <p className="text-sm text-[#aaadb0]">Міжнародний арбітр, Адвокат, Судовий Експерт</p>
               </figcaption>
-              <img
-                src={ `${ import.meta.env.BASE_URL }gennadiy.png` }
+              <OptimizedImage
+                src={`${import.meta.env.BASE_URL}gennadiy.png`}
                 alt="Геннадій Пампуха - Міжнародний арбітр, Адвокат, Судовий Експерт"
                 className="w-full h-full object-cover"
+                width={384}
+                height={384}
                 loading="eager"
+                priority={true}
               />
             </figure>
           </div>

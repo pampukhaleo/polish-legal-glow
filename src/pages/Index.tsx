@@ -8,11 +8,13 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import SupportedBySection from "@/components/SupportedBySection";
 import SEOHead from "@/components/SEOHead";
+import MetaTags from "@/components/MetaTags";
 import { OrganizationStructuredData } from "@/components/StructuredData";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-[#0F1729]">
+      <MetaTags />
       <SEOHead 
         title="Геннадій Пампуха | Професійна Юридична та Експертна допомога українцям у Польщі"
         description="Експертні юридичні консультації для українців з питань польського законодавства, бізнес-регулювання та імміграційних процесів."
