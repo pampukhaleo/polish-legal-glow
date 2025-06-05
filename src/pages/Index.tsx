@@ -8,6 +8,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import SupportedBySection from "@/components/SupportedBySection";
 import SEOHead from "@/components/SEOHead";
+import { OrganizationStructuredData } from "@/components/StructuredData";
 
 const Index = () => {
   return (
@@ -17,6 +18,16 @@ const Index = () => {
         description="Експертні юридичні консультації для українців з питань польського законодавства, бізнес-регулювання та імміграційних процесів."
         keywords="юридичні послуги, консультації, польське право, українці в Польщі, міжнародне право, експерт, адвокат, Геннадій Пампуха"
         canonical="/"
+      />
+      <OrganizationStructuredData
+        name="Геннадій Пампуха - Міжнародний Юридичний та Експертний Консалт"
+        description="Професійні юридичні послуги для українців у Польщі. Міжнародний арбітраж, імміграційні консультації, бізнес-право."
+        url="https://yourdomain.com"
+        address={{
+          streetAddress: "Вул. Прикладна, 1",
+          addressLocality: "Варшава",
+          addressCountry: "Польща"
+        }}
       />
       <Navbar />
       <main>

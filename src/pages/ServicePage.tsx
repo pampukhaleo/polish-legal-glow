@@ -5,6 +5,7 @@ import NotFound from './NotFound';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
+import { ServiceStructuredData } from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -33,27 +34,34 @@ const ServicePage = () => {
         keywords={`${service.title}, юридичні послуги, консультації, Геннадій Пампуха, польське право`}
         canonical={`/services/${service.slug}`}
       />
+      <ServiceStructuredData
+        name={service.title}
+        description={service.description}
+        provider="Геннадій Пампуха - Міжнародний Юридичний та Експертний Консалт"
+        url={`https://yourdomain.com/services/${service.slug}`}
+        serviceType={service.title}
+      />
       <Navbar />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-4 mb-8">
+          <header className="flex items-center gap-4 mb-8">
             <div className="h-16 w-16 rounded-lg button-gradient flex items-center justify-center">
               <ServiceIcon className="h-8 w-8 text-white" />
             </div>
             <h1 className="text-4xl font-bold text-white font-serif">{service.title}</h1>
-          </div>
+          </header>
           
-          <div className="prose prose-invert max-w-none">
+          <article className="prose prose-invert max-w-none">
             <p className="text-xl text-[#aaadb0] mb-8">{service.description}</p>
 
-            <div className="bg-[#1F1F3A] border border-[#333333] rounded-lg p-8 mt-8 shadow-md">
+            <section className="bg-[#1F1F3A] border border-[#333333] rounded-lg p-8 mt-8 shadow-md">
               <h2 className="text-2xl font-bold text-white mb-4">Наші послуги включають:</h2>
               <p className="text-[#aaadb0] whitespace-pre-line" style={ { lineHeight: '1.6' } }>
                 { service.fullDescription }
               </p>
-            </div>
+            </section>
 
-            <div className="mt-12">
+            <section className="mt-12">
               <h3 className="text-2xl font-bold text-white mb-6">Інші послуги:</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 { otherServices.map((otherService) => (
@@ -67,8 +75,8 @@ const ServicePage = () => {
                   </Link>
                 ))}
               </div>
-            </div>
-          </div>
+            </section>
+          </article>
         </div>
       </div>
       <Footer />
