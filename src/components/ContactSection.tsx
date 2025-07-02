@@ -89,7 +89,9 @@ const ContactSection = () => {
                     <Mail className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5"/>
                     <div>
                       <p className="text-sm text-[#aaadb0]">Email</p>
-                      <p className="text-white">info@chea-taic.be</p>
+                      <p className="text-white">
+                        <a href="mailto:info@chea-taic.be" className="hover:underline">info@chea-taic.be</a>
+                      </p>
                     </div>
                   </div>
 
@@ -97,8 +99,12 @@ const ContactSection = () => {
                     <Phone className="h-5 w-5 text-[#60A5FA] mr-3 mt-0.5"/>
                     <div>
                       <p className="text-sm text-[#aaadb0]">Телефон</p>
-                      <p className="text-white">+48 539 240 846</p>
-                      <p className="text-white">+380 50 413 03 93</p>
+                      <p className="text-white">
+                        <a href="tel:+48539240846" className="hover:underline">+48 539 240 846</a>
+                      </p>
+                      <p className="text-white">
+                        <a href="tel:+380504130393" className="hover:underline">+380 50 413 03 93</a>
+                      </p>
                     </div>
                   </div>
 
