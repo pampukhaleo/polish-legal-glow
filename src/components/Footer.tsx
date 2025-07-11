@@ -22,11 +22,6 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Усі права захищені.
             </div>
             
-            <div className="flex space-x-4">
-              <a href="#" className="text-[#aaadb0] hover:text-white text-sm">Політика конфіденційності</a>
-              <a href="#" className="text-[#aaadb0] hover:text-white text-sm">Умови використання</a>
-            </div>
-            
             <button 
               onClick={scrollToTop}
               className="h-10 w-10 rounded-full button-gradient hover:opacity-90 flex items-center justify-center text-white transition-colors"

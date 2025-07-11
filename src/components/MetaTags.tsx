@@ -1,5 +1,6 @@
 
-import { Helmet } from 'react-helmet-async';
+import * as HelmetPkg from 'react-helmet-async'
+const { Helmet } = HelmetPkg
 
 const MetaTags = () => {
   return (
@@ -32,7 +33,6 @@ const MetaTags = () => {
       
       {/* Security headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       
       {/* Performance hints */}

@@ -1,5 +1,6 @@
 
-import { Helmet } from 'react-helmet-async';
+import * as HelmetPkg from 'react-helmet-async'
+const { Helmet } = HelmetPkg
 
 interface SEOHeadProps {
   title?: string;
@@ -22,8 +23,9 @@ const SEOHead = ({
   ogUrl,
   canonical
 }: SEOHeadProps) => {
-  const siteUrl = window.location.origin;
-  const currentUrl = window.location.href;
+  const isBrowser = typeof window !== 'undefined';
+  const siteUrl   = isBrowser ? window.location.origin : '';
+  const currentUrl= isBrowser ? window.location.href    : '';
 
   return (
     <Helmet>
@@ -57,8 +59,10 @@ const SEOHead = ({
       <meta property="article:publisher" content="Міжнародний Юридичний та Експертний Консалт" />
       
       {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={`${siteUrl}${canonical}`} />}
-      
+      {canonical && (
+        <link rel="canonical" href={`${siteUrl}${canonical}`} />
+      )}
+
       {/* Language */}
       <meta httpEquiv="content-language" content="uk" />
       <link rel="alternate" hrefLang="uk" href={currentUrl} />
