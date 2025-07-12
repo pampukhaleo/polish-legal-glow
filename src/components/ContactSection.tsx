@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { toast } from "@/hooks/use-toast";
-import { z } from "zod";
+import { number, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -16,6 +16,7 @@ const formSchema = z.object({
   email: z.string().email({ message: "Введіть дійсну email адресу" }),
   subject: z.string().min(3, { message: "Тема має містити щонайменше 3 символи" }),
   message: z.string().min(10, { message: "Повідомлення має містити щонайменше 10 символів" }),
+  phone: z.string().min(8, { message: "Напишіть коректний номер телефону" }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -31,6 +32,7 @@ const ContactSection = () => {
       email: "",
       subject: "",
       message: "",
+      phone: "",
     },
   });
 
@@ -152,90 +154,109 @@ const ContactSection = () => {
               <h3 className="text-xl font-serif text-white mb-6">Надіслати повідомлення</h3>
               
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <form onSubmit={ form.handleSubmit(onSubmit) } className="space-y-4">
+                  <input type="hidden" name="companyName" value="GG POLAND"/>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <FormField
-                      control={form.control}
+                      control={ form.control }
                       name="name"
-                      render={({ field }) => (
+                      render={ ({ field }) => (
                         <FormItem>
                           <FormLabel className="text-sm text-[#aaadb0]">Повне ім'я</FormLabel>
                           <FormControl>
-                            <Input 
-                              placeholder="Ваше ім'я" 
+                            <Input
+                              placeholder="Ваше ім'я"
                               className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
-                              {...field}
+                              { ...field }
                             />
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-400"/>
                         </FormItem>
-                      )}
+                      ) }
                     />
-                    
+
                     <FormField
-                      control={form.control}
+                      control={ form.control }
                       name="email"
-                      render={({ field }) => (
+                      render={ ({ field }) => (
                         <FormItem>
                           <FormLabel className="text-sm text-[#aaadb0]">Email адреса</FormLabel>
                           <FormControl>
-                            <Input 
+                            <Input
                               type="email"
-                              placeholder="Ваш email" 
+                              placeholder="Ваш email"
                               className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
-                              {...field}
+                              { ...field }
                             />
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-400"/>
                         </FormItem>
-                      )}
+                      ) }
                     />
                   </div>
-                  
+
                   <FormField
-                    control={form.control}
+                    control={ form.control }
+                    name="phone"
+                    render={ ({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm text-[#aaadb0]">Телефон</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Ваш номер телефону?"
+                            className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
+                            { ...field }
+                          />
+                        </FormControl>
+                        <FormMessage className="text-red-400"/>
+                      </FormItem>
+                    ) }
+                  />
+
+                  <FormField
+                    control={ form.control }
                     name="subject"
-                    render={({ field }) => (
+                    render={ ({ field }) => (
                       <FormItem>
                         <FormLabel className="text-sm text-[#aaadb0]">Тема</FormLabel>
                         <FormControl>
-                          <Input 
-                            placeholder="Як я можу допомогти?" 
+                          <Input
+                            placeholder="Як я можу допомогти?"
                             className="bg-[#0F1729] border-[#333333] text-white focus:border-[#60A5FA]"
-                            {...field}
+                            { ...field }
                           />
                         </FormControl>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-400"/>
                       </FormItem>
-                    )}
+                    ) }
                   />
-                  
+
                   <FormField
-                    control={form.control}
+                    control={ form.control }
                     name="message"
-                    render={({ field }) => (
+                    render={ ({ field }) => (
                       <FormItem>
                         <FormLabel className="text-sm text-[#aaadb0]">Повідомлення</FormLabel>
                         <FormControl>
-                          <Textarea 
+                          <Textarea
                             placeholder="Ваше повідомлення..."
-                            rows={5}
+                            rows={ 5 }
                             className="bg-[#0F1729] border-[#333333] text-white resize-none focus:border-[#60A5FA]"
-                            {...field}
+                            { ...field }
                           />
                         </FormControl>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-400"/>
                       </FormItem>
-                    )}
+                    ) }
                   />
-                  
+
                   <div className="pt-2">
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       className="button-gradient text-white hover:opacity-90 w-full md:w-auto"
-                      disabled={isSubmitting}
+                      disabled={ isSubmitting }
                     >
-                      {isSubmitting ? 'Надсилання...' : 'Надіслати повідомлення'}
+                      { isSubmitting ? 'Надсилання...' : 'Надіслати повідомлення' }
                     </Button>
                   </div>
                 </form>
